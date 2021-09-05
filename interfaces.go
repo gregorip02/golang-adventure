@@ -1,6 +1,11 @@
 package main
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"fmt"
+	"log"
+	"os"
+)
 
 type Jsonable interface {
 	toJson() ([]byte, error)
@@ -10,9 +15,10 @@ func printJson(contract Jsonable) {
 	data, err := contract.toJson()
 
 	if err != nil {
-		println("Error parsing to json")
+		log.Fatal(err)
+		os.Exit(1)
 	} else {
-		println(string(data))
+		fmt.Println(string(data))
 	}
 }
 

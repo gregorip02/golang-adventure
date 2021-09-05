@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Post struct {
 	id int
 	content string
@@ -33,6 +35,6 @@ func main() {
 		permissions: []string{"one", "two"},
 	}
 
-	println(admin.user.friends())
-	println(len(admin.user.posts()))
+	fmt.Println(admin.user.friends())
+	fmt.Println(len(admin.user.posts()))
 }

@@ -2,16 +2,30 @@ package main
 
 import "fmt"
 
+type Friend struct {
+	name string
+	age int
+}
+
 func main() {
-    var a1 byte = 97
-    var a2 byte = 98
-    var a3 byte = 99
+    m := make(map[string]string)
+    m["name"] = "Gregori"
+    m["address"] = "Mérida, Venezuela"
 
-    fmt.Println(a1)
-    fmt.Println(a2)
-    fmt.Println(a3)
+    fmt.Println("Hi", m["name"] + "!")
+    fmt.Println("Are you from", m["address"] + "?")
 
-    fmt.Printf("%c\n", a1)
-    fmt.Printf("%c\n", a2)
-    fmt.Printf("%c\n", a3)
+    f := []Friend {
+    	{name: "Maria", age: 79},
+    	{name: "Javier", age: 54},
+    }
+
+    eachPrint(f)
+}
+
+func eachPrint(friends []Friend) {
+	for _, friend := range friends {
+		println(friend.name)
+		println(friend.age)
+	}
 }
