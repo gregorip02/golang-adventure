@@ -8,3 +8,4 @@ que aprendo **go**.
 - https://platzi.com/cursos/golang-intermedio/
 - https://platzi.com/cursos/programacion-golang-2020/
 - https://www.youtube.com/channel/UC-R6fvU6PlxwcrZ5Ixgvk9g
+- https://medium.com/@felipedutratine/profile-your-benchmark-with-pprof-fb7070ee1a94
