@@ -15,17 +15,13 @@ func FibonacciFastest(number int) int {
 	memo := make(map[int]int)
 
 	for i := 0; i < number - 1; i++ {
-		add := 0
-
 		if i <= 1 {
-			add = i
-			memo[i] = add
+			memo[i] = i
 		} else {
-			add = memo[i - 1] + memo[i - 2]
-			memo[i] = add
+			memo[i] = memo[i - 1] + memo[i - 2]
 		}
 
-		fibonacci = fibonacci + add
+		fibonacci = fibonacci + memo[i]
 	}
 
 	return fibonacci + 1
